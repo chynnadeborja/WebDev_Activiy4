@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/death-star');
 :root{
   --base-clr: #11121a;
   --line-clr: #42434a;
   --hover-clr: #222533;
-  --text-clr: #e6e6ef;
+  --text-clr: #ffe81f;
   --accent-clr: #5e63ff;
   --secondary-text-clr: #b0b3c1;
 }
@@ -12,23 +12,66 @@
   padding: 0;
 }
 html{
-  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Death Star', sans-serif;
   line-height: 1.5rem;
+  letter-spacing: 1px;
 }
 body{
   min-height: 100vh;
   min-height: 100dvh;
   background-image: url(assets/stars.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-clr);
   display: grid;
   grid-template-columns: auto 1fr;
+  animation: change 80s infinite ease-in-out;
+
+}
+
+@keyframes change{
+  0%{
+    background-image: url(assets/Shot1.jpg);
+  }
+  10%{
+    background-image: url(assets/shot2.jpg);
+  }
+  20%{
+    background-image: url(assets/shot3.jpg);
+  }
+  30%{
+    background-image: url(assets/shot5.jpg);
+  }
+  40%{
+    background-image: url(assets/shot6.jpg);
+  }
+  50%{
+    background-image: url(assets/shot7.jpg);
+  }
+  60%{
+    background-image: url(assets/shot8.jpg);
+  }
+  70%{
+    background-image: url(assets/shot9.jpg);
+  }
+  80%{
+    background-image: url(assets/shot10.jpg);
+  }  
+  90%{
+    background-image: url(assets/shot11.jpeg);
+  }
+  100%{
+    background-image: url(assets/shot12.jpg);
+  }
+
 }
 #sidebar{
   box-sizing: border-box;
   height: 100vh;
   width: 250px;
   padding: 5px 1em;
-  background-color: var(--base-clr);
+  background-color: black;
   border-right: 1px solid var(--line-clr);
 
   position: sticky;
@@ -143,14 +186,21 @@ main p{
   margin-top: 5px;
   margin-bottom: 15px;
 }
-.container{
-  background-color: #11121a;
-  border: 1px solid var(--line-clr);
-  border-radius: 1em;
-  margin-bottom: 20px;
-  padding: min(3em, 15%);
+.glass-container{
+  height: 520px;
+  width: 350;
+  padding: 30px 50px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
-  h2, p { margin-top: 1em }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
 }
 
 @media(max-width: 800px){
@@ -160,7 +210,7 @@ main p{
   main{
     padding: 2em 1em 60px 1em;
   }
-  .container{
+  .glass-container{
     border: none;
     padding: 0;
   }
